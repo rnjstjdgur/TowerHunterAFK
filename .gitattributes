@@ -1,2 +1,4 @@
 # 튜토리얼 레이아웃 파일(Wolfram 오해 주범) 통계 제외
 *.wlt linguist-generated=true
+*.shader linguist-detect=false
+*.hlsl linguist-detect=false
