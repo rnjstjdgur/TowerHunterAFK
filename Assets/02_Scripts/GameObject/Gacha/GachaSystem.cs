@@ -91,7 +91,11 @@ public class GachaSystem : MonoBehaviour
             Debug.LogError($"다이아몬드가 부족합니다. 현재 다이아 갯수: {SaveManager.Instance.CurrentSaveData.Diamond}");
             return null;
         }
-        if (_isCardDrawing == true) return null;
+        if (_isCardDrawing == true)
+        {
+            NetworkManager.Instance.PlayerResourceService.RequestAddDiamond(100);
+            return null;
+        }
 
         _isCardDrawing = true;
 
@@ -143,7 +147,11 @@ public class GachaSystem : MonoBehaviour
             Debug.LogError($"다이아몬드가 부족합니다. 현재 다이아 갯수: {SaveManager.Instance.CurrentSaveData.Diamond}");
             return null;
         }
-        if (_isCardDrawing == true) return null;
+        if (_isCardDrawing == true)
+        {
+            NetworkManager.Instance.PlayerResourceService.RequestAddDiamond(1000);
+            return null;
+        }
 
         _isCardDrawing = true;
 
